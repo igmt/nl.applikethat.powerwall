@@ -1,0 +1,87 @@
+{
+    "id": "nl.applikethat.powerwall",
+    "name": {
+        "en": "Eneco Powerwall",
+        "nl": "Eneco Powerwall"
+    },
+
+    "description": {
+      "en": "Gives you a status update on your Eneco/Tesla Powerwall",
+      "nl": "Geeft je een status update over je Eneco/Tesla Powerwall"
+    },
+
+    "version": "0.0.1",
+    "compatibility": ">=1.1.2",
+    "category": "energy",
+    "author": {
+        "name": "Applikethat.nl",
+        "email": "rob@applikethat.nl"
+    },
+
+    "permissions": [
+        "homey:manager:speech-input",
+        "homey:manager:speech-output"
+    ],
+
+    "images": {
+        "large": "./assets/images/large.jpg",
+        "small": "./assets/images/small.jpg"
+    },
+
+    "flow": {
+      "triggers": [
+        {
+          "id": "charging_start",
+          "title": {
+              "en": "Powerwall started charging",
+              "nl": "Powerwall begint met laden"
+          }
+        },
+        {
+          "id": "charging_stop",
+          "title": {
+            "en": "Powerwall stopped charging",
+            "nl": "Powerwall is gestopt met laden"
+          }
+        }
+      ],
+      "conditions": [
+        {
+          "id": "charging",
+            "title": {
+                "en": "Powerwall !{{is|isn't}} charging",
+                "nl": "Powerwall !{{laadt|laadt niet}} op"
+            }
+        }
+      ],
+      "actions": [
+          {
+              "id": "speak_percentage",
+              "title": {
+                  "en": "Read current battery percentage",
+                  "nl": "Huidige battery percentage oplezen"
+              }
+          }
+      ]
+    },
+
+    "speech": [
+    {
+      "id": "battery_status",
+      "importance": 0.7,
+      "triggers": {
+        "en": [
+          "battery status",
+          "battery level",
+          "powerwall status"
+        ],
+        "nl": [
+          "status batterij",
+          "batterij status",
+          "powerwall status",
+          "status powerwall"
+        ]
+      }
+    }
+  ]
+}
