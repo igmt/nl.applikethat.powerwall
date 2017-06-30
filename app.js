@@ -1,8 +1,11 @@
-"use strict";
+'use strict';
+var http = require('http');
+var speechEngine;
 
 function init() {
-	
-	Homey.log("Hello world!");
+
+	speechEngine = Homey.manager('speech-output');
+	Homey.log(__('loaded'));
 	
 }
 

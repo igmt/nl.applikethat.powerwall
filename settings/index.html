@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+    <head>
+
+    </head>
+    <body>
+
+        <h1 data-i18n="settings.title">Eneco/Tesla Powerwall</h1>
+
+        <fieldset>
+            <legend data-i18n="settings.fieldset">General settings</legend>
+	        <p data-i18n="settings.description">This app makes Homey read the status of your Eneco/Tesla Powerwall with Ampard interface.</p>
+
+            <div class="field row">
+                <label for="username" data-i18n="settings.username">Ampard username</label>
+                <input id="username" type="text" value="" />
+            </div>
+            <div class="field row">
+                <label for="password" data-i18n="settings.password">Ampard password</label>
+                <input id="password" type="password" value="" />
+            </div>
+            <div class="field row">
+                <label for="api" data-i18n="settings.api">Ampard API Url</label>
+                <input id="api" type="text" value="https://power.ampard.nl/api/accrest/resources/"/>
+            </div>
+
+        </fieldset>
+
+        <button class="right" onclick="save()" data-i18n="settings.save">Save</button>
+
+        <script type="text/javascript">
+        function onHomeyReady(){
+            Homey.ready();
+            Homey.get('username', function(err, username){
+                if (err) return console.error('Could not get setting: username', err);
+                if (username) {
+                	document.getElementById('username').value = username;
+                }
+            });
+            Homey.get('password', function(err, password){
+                if (err) return console.error('Could not get setting: password', err);
+                if (password) {
+                    document.getElementById('password').value = password;
+                }
+            });
+            Homey.get('api', function(err, api){
+                if (err) return console.error('Could not get setting: api', err);
+                if (api) {
+                    document.getElementById('api').value = api;
+                }
+            });
+        }
+
+        function save() {
+            Homey.set('username', document.getElementById('username').value);
+            Homey.set('password', document.getElementById('password').value);
+            Homey.set('api', document.getElementById('api').value);
+            Homey.alert(__('settings.saved'));
+        }
+        </script>
+
+    </body>
+</html>

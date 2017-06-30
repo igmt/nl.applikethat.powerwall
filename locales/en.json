@@ -1,1 +1,13 @@
-{}
+{
+  "settings": {
+		"title": "Eneco/Tesla Powerwall",
+		"description": "",
+		"fieldset": "Account settings",
+		"username": "Ampard Username",
+		"password": "Ampard Password",
+    "api": "Ampard API Url",
+		"save": "Save",
+		"saved": "Settings are saved."
+	},
+  "loaded": "Powerwall app loaded!"
+}

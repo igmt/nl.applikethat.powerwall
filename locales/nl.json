@@ -1,0 +1,13 @@
+{
+  "settings": {
+		"title": "Eneco/Tesla Powerwall",
+		"description": "Deze instellingen worden als standaardwaardes gebruikt wanneer je de app via een spraakopdracht aanspreekt.",
+		"fieldset": "Account instellingen",
+		"username": "Ampard gebruikersnaam",
+		"password": "Ampard wachtwoord",
+    "api": "Ampard API Url",
+		"save": "Opslaan",
+		"saved": "De instellingen zijn opgeslagen."
+	},
+  "loaded": "Powerwall app is geladen!"
+}

@@ -73,15 +73,28 @@
         "en": [
           "battery status",
           "battery level",
-          "powerwall status"
+          "powerwall status",
+          "powerwall"
         ],
         "nl": [
           "status batterij",
           "batterij status",
           "powerwall status",
-          "status powerwall"
+          "status powerwall",
+          "powerwall"
         ]
       }
+    }
+  ],
+
+  "speechexamples": [
+		{
+			"en": "What is the status of my Power wall?",
+			"nl": "Wat is de status van mijn Power wall?"
+		},
+    {
+      "en": "What is the status of my battery?",
+      "nl": "Wat is de status van mijn batterij?"
     }
   ]
 }
