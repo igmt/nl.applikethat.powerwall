@@ -1,5 +1,6 @@
 {
     "id": "nl.applikethat.powerwall",
+    "sdk": 2,
     "name": {
         "en": "Eneco Powerwall",
         "nl": "Eneco Powerwall"

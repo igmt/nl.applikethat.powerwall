@@ -9,5 +9,6 @@
 		"save": "Opslaan",
 		"saved": "De instellingen zijn opgeslagen."
 	},
-  "loaded": "Powerwall app is geladen!"
+  "loaded": "Powerwall app is geladen!",
+  "login_try": "Bezig met aanmelden bij Ampard API."
 }

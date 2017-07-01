@@ -9,5 +9,6 @@
 		"save": "Save",
 		"saved": "Settings are saved."
 	},
-  "loaded": "Powerwall app loaded!"
+  "loaded": "Powerwall app loaded!",
+  "login_try": "Trying to authenticate with Ampard API."
 }
